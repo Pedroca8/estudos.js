@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 62.5%;
+    font-family: "inter",sans-serif;
+}
+body{
+    margin: 3rem;
+}
+.accordion{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+.accordion .title{
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.accordion .title .icon{
+    border: 2px solid black;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.accordion .title .icon span{
+    font-size: 2.5rem;
+    transition: .3s;
+}
+.accordion p{
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    display: none;
+}
+.accordion.active p{
+    display: block;
+    animation: fadein .3s forwards;
+}
+.accordion .title h3{
+    font-size: 1.6rem;
+}
+
+.accordion.active .title .icon span{
+    transform:rotate(180deg);
+}
+@keyframes fadein{
+    from{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
